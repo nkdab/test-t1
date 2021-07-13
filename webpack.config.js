@@ -38,7 +38,7 @@ module.exports = {
   output: {
     filename: `js/[name].[contenthash].js`,
     path: path.resolve(__dirname, `dist`),
-    publicPath: isDev ? "/" : "/test-t1/",
+    publicPath: isDev ? "/test-t1/" : "/",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
