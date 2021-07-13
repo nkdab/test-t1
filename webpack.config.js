@@ -38,6 +38,7 @@ module.exports = {
   output: {
     filename: `js/[name].[contenthash].js`, // Название итогового файла js
     path: path.resolve(__dirname, `dist`),
+    publicPath: "auto",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
