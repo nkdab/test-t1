@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require(`terser-webpack-plugin`);
 
-const isDev = process.env.NODE_ENV === `development`; // Опеределяем находимся ли мы в режиме разработки
+const isDev = process.env.NODE_ENV === `development`;
 const isBuild = !isDev;
 
 const optimization = () => {
@@ -36,9 +36,9 @@ const cssLoaders = (extra) => {
 module.exports = {
   entry: path.join(__dirname, "/src/index.js"),
   output: {
-    filename: `js/[name].[contenthash].js`, // Название итогового файла js
+    filename: `js/[name].[contenthash].js`,
     path: path.resolve(__dirname, `dist`),
-    publicPath: process.env.NODE_ENV === "production" ? "/test-t1/" : "/",
+    publicPath: isDev ? "/" : "/test-t1/",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
