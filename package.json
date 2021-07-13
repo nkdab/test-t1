@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Тестовое задание для компании «Т1 Консалтинг»",
   "main": "src/index.js",
-  "homepage": "http://nkdab.github.io/test-t1/",
+  "homepage": "https://nkdab.github.io/test-t1/",
   "scripts": {
     "serve": "webpack serve --mode development",
     "build": "webpack --mode production"

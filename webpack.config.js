@@ -38,10 +38,7 @@ module.exports = {
   output: {
     filename: `js/[name].[contenthash].js`, // Название итогового файла js
     path: path.resolve(__dirname, `dist`),
-    publicPath:
-      process.env.NODE_ENV === "production"
-        ? "http://nkdab.github.io/test-t1/"
-        : "/",
+    publicPath: process.env.NODE_ENV === "production" ? "/test-t1/" : "/",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
