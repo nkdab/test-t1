@@ -2,7 +2,8 @@
   "name": "test-t1",
   "version": "0.0.1",
   "description": "Тестовое задание для компании «Т1 Консалтинг»",
-  "main": "index.js",
+  "main": "src/index.js",
+  "homepage": "http://nkdab.github.io/test-t1/",
   "scripts": {
     "serve": "webpack serve --mode development",
     "build": "webpack --mode production"
