@@ -36,9 +36,9 @@ const cssLoaders = (extra) => {
 module.exports = {
   entry: path.join(__dirname, "/src/index.js"),
   output: {
-    filename: `js/[name].[contenthash].js`,
+    filename: `[name].[contenthash].js`,
     path: path.resolve(__dirname, `dist`),
-    publicPath: isDev ? "/test-t1/" : "/",
+    publicPath: isBuild ? "/test-t1/" : "/",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
@@ -64,7 +64,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `css/[name].[contenthash].css`,
+      filename: `[name].[contenthash].css`,
     }),
   ],
   module: {
@@ -77,9 +77,6 @@ module.exports = {
         test: /\.(png|jpg|svg|gif|jpeg)$/,
         use: {
           loader: `file-loader`,
-          options: {
-            outputPath: "./assets/img",
-          },
         },
       },
       {
