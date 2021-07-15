@@ -38,7 +38,6 @@ module.exports = {
   output: {
     filename: `[name].[contenthash].js`,
     path: path.resolve(__dirname, `dist`),
-    publicPath: isBuild ? "/test-t1/" : "/",
   },
   resolve: {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`],
